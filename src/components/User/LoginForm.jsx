@@ -52,7 +52,7 @@ const LoginForm = () => (
           <h2 className="text-sm mt-2">
             No have account?
             <span className="underline hover:font-semibold">
-              <Link href="/register">Login!</Link>
+              <Link href="/register">Register!</Link>
             </span>
           </h2>
         </div>
