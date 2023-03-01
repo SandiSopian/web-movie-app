@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import tmdb from "@/pages/api/tmdb";
 import MovieCard from "../MovieCard";
+import Layout from "@/components/Layout/Layout";
 
 const UpComing = () => {
   const [movies, setMovies] = useState([]);
@@ -14,18 +15,18 @@ const UpComing = () => {
   }, []);
 
   return (
-    <>
-      <div className="flex justify-between">
+    <Layout>
+      <div className="font-bold text-xl text-center p-4">
         <h1>Up Coming</h1>
+        <hr />
       </div>
-      <hr />
 
       <div className="flex pb-5 px-5 flex-wrap mx-auto gap-4">
         {movies.map((movie, index) => {
           return <MovieCard key={index} {...movie} />;
         })}
       </div>
-    </>
+    </Layout>
   );
 };
 

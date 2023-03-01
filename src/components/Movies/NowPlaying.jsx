@@ -24,7 +24,7 @@ const NowPlaying = () => {
 
       <div className="flex pb-5 px-5 overflow-x-auto mx-auto">
         {movies.map((movie, index) => {
-          if (index < 6) {
+          if (index < 7) {
             return <MovieCard key={index} {...movie} />;
           }
           return null;
